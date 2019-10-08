@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserService } from './user.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, UsersComponent, UserProfileComponent ],
+  declarations: [ AppComponent, UsersComponent, UserProfileComponent, MessagesComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [UserService]
+  providers: [UserService, MessageService]
 })
 export class AppModule { }
