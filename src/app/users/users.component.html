@@ -1,4 +1,17 @@
-<h2>{{user.name}}</h2>
-<div><span>Cursus : </span>{{user.cursus}}</div>
-<div><span>Mail : </span>{{user.mail}}</div>
-<div><span>Age : </span>{{user.age}}</div>
+<h2>Participants :</h2>
+<ul class="users">
+  <li *ngFor="let user of users" class="badge" (click)="onSelect(user)">
+    <div>
+      Nom : {{user.name}}
+    </div>
+    <div>
+      Mail : {{user.mail}}
+    </div>
+    <div>
+      Cursus : {{user.cursus}}
+    </div>
+    <div>
+      Age : {{user.age}} ans
+    </div>
+  </li>
+</ul>
