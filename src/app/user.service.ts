@@ -12,7 +12,11 @@ export class UserService {
   constructor(private messageService : MessageService) { }
 
   getUsers(): Observable<User[]> {
-  this.messageService.add('UserService: fetched users');
-  return of(USERS);
-}
+     this.messageService.add('UserService: fetched users ');
+     return of(USERS);
+  }
+  getUser(age : number): Observable<User> {
+     this.messageService.add(`UserService: fetched user age = ${age}`);
+     return of(USERS.find(user => user.age === age));
+  }
 }
